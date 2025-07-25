@@ -46,3 +46,5 @@ const HeroSection = () => {
           {/* Hero Image */}
           <div className="flex-1 max-w-lg lg:max-w-none">
           </div>
+  )
+}
