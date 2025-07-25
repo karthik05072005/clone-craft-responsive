@@ -108,74 +108,76 @@ const FAQSection = () => {
   };
 
   return (
-    <section id="faq" className="py-16 bg-background">
-      <div className="container mx-auto px-4">
-        {/* Header with Search */}
-        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-12 gap-6">
+    <section id="faq" className="py-20 bg-background">
+      <div className="container mx-auto px-4 max-w-7xl">
+        {/* Header with Search - Matching Screenshot Layout */}
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-16 gap-8">
           <div className="flex-1">
-            <h2 className="text-4xl md:text-5xl font-bold text-heading mb-2">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground">
               Frequently asked questions
             </h2>
           </div>
           
-          {/* Search Bar */}
-          <div className="relative max-w-md w-full lg:w-auto">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
+          {/* Search Bar - Matching Screenshot Style */}
+          <div className="relative max-w-sm w-full lg:w-auto">
             <Input
               type="text"
               placeholder="Looking for something?"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10 pr-4 py-3 bg-background border-border rounded-lg text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary focus:border-primary"
+              className="pl-4 pr-12 py-3 bg-background border-border/30 rounded-lg text-foreground placeholder:text-muted-foreground focus:ring-1 focus:ring-primary/20 focus:border-primary/30 text-base"
             />
+            <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
           </div>
         </div>
 
-        {/* FAQ Tabs */}
+        {/* FAQ Tabs - Matching Screenshot Style */}
         <Tabs defaultValue="managing" className="w-full">
-          {/* Tab Navigation */}
-          <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4 mb-8 bg-secondary/50 p-1 rounded-lg">
-            <TabsTrigger 
-              value="managing" 
-              className="text-sm font-medium px-4 py-3 rounded-md data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-sm transition-all"
-            >
-              Managing Your Pickup
-            </TabsTrigger>
-            <TabsTrigger 
-              value="service"
-              className="text-sm font-medium px-4 py-3 rounded-md data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-sm transition-all"
-            >
-              Service and Pick ups
-            </TabsTrigger>
-            <TabsTrigger 
-              value="pricing"
-              className="text-sm font-medium px-4 py-3 rounded-md data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-sm transition-all"
-            >
-              Pricing and Payment
-            </TabsTrigger>
-            <TabsTrigger 
-              value="general"
-              className="text-sm font-medium px-4 py-3 rounded-md data-[state=active]:bg-background data-[state=active]:text-primary data-[state=active]:shadow-sm transition-all"
-            >
-              General
-            </TabsTrigger>
-          </TabsList>
+          {/* Tab Navigation - Clean Underline Style */}
+          <div className="border-b border-border/20 mb-12">
+            <TabsList className="bg-transparent h-auto p-0 space-x-0">
+              <TabsTrigger 
+                value="managing" 
+                className="bg-transparent text-base font-medium px-0 py-4 mr-12 border-b-2 border-transparent data-[state=active]:border-accent data-[state=active]:text-accent data-[state=active]:bg-transparent data-[state=active]:shadow-none rounded-none hover:text-accent/80 transition-colors"
+              >
+                Managing Your Pickup
+              </TabsTrigger>
+              <TabsTrigger 
+                value="service"
+                className="bg-transparent text-base font-medium px-0 py-4 mr-12 border-b-2 border-transparent data-[state=active]:border-accent data-[state=active]:text-accent data-[state=active]:bg-transparent data-[state=active]:shadow-none rounded-none hover:text-accent/80 transition-colors"
+              >
+                Service and Pick ups
+              </TabsTrigger>
+              <TabsTrigger 
+                value="pricing"
+                className="bg-transparent text-base font-medium px-0 py-4 mr-12 border-b-2 border-transparent data-[state=active]:border-accent data-[state=active]:text-accent data-[state=active]:bg-transparent data-[state=active]:shadow-none rounded-none hover:text-accent/80 transition-colors"
+              >
+                Pricing and Payment
+              </TabsTrigger>
+              <TabsTrigger 
+                value="general"
+                className="bg-transparent text-base font-medium px-0 py-4 border-b-2 border-transparent data-[state=active]:border-accent data-[state=active]:text-accent data-[state=active]:bg-transparent data-[state=active]:shadow-none rounded-none hover:text-accent/80 transition-colors"
+              >
+                General
+              </TabsTrigger>
+            </TabsList>
+          </div>
 
           {/* Tab Content */}
           {Object.entries(faqData).map(([key, category]) => (
             <TabsContent key={key} value={key} className="mt-0">
-              <div className="max-w-4xl mx-auto">
-                <Accordion type="single" collapsible className="w-full space-y-4">
+              <div className="max-w-4xl">
+                <Accordion type="single" collapsible className="w-full space-y-6">
                   {filterQuestions(category.questions).map((faq, index) => (
                     <AccordionItem 
                       key={index} 
                       value={`${key}-item-${index}`}
-                      className="border border-border rounded-lg px-6 py-2 bg-card/50 hover:bg-card transition-colors"
+                      className="border-0 border-b border-border/10 pb-6 last:border-b-0"
                     >
-                      <AccordionTrigger className="text-left text-lg font-semibold text-heading hover:text-primary py-6 hover:no-underline">
+                      <AccordionTrigger className="text-left text-lg font-semibold text-foreground hover:text-primary py-0 hover:no-underline [&[data-state=open]>svg]:rotate-180">
                         {faq.question}
                       </AccordionTrigger>
-                      <AccordionContent className="text-muted-foreground text-base leading-relaxed pb-6">
+                      <AccordionContent className="text-muted-foreground text-base leading-relaxed pt-4 pb-0">
                         {faq.answer}
                       </AccordionContent>
                     </AccordionItem>
@@ -184,7 +186,7 @@ const FAQSection = () => {
                 
                 {/* No Results Message */}
                 {searchQuery && filterQuestions(category.questions).length === 0 && (
-                  <div className="text-center py-12">
+                  <div className="text-center py-16">
                     <p className="text-muted-foreground text-lg">
                       No questions found matching "{searchQuery}" in {category.title}.
                     </p>
@@ -199,23 +201,23 @@ const FAQSection = () => {
         </Tabs>
 
         {/* Contact Section */}
-        <div className="mt-16 text-center bg-secondary/30 rounded-2xl p-8">
-          <h3 className="text-2xl font-bold text-heading mb-4">
+        <div className="mt-20 text-center bg-secondary/20 rounded-2xl p-12">
+          <h3 className="text-2xl font-bold text-foreground mb-4">
             Still have questions?
           </h3>
-          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto text-lg">
             Can't find the answer you're looking for? Our friendly customer support team is here to help.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="mailto:support@baccksee.com"
-              className="inline-flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium"
+              className="inline-flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors font-medium text-base"
             >
               Contact Support
             </a>
             <a 
               href="tel:+1-800-BACCKSEE"
-              className="inline-flex items-center justify-center px-6 py-3 border border-border rounded-lg hover:bg-secondary transition-colors font-medium"
+              className="inline-flex items-center justify-center px-8 py-4 border border-border rounded-lg hover:bg-secondary/50 transition-colors font-medium text-base"
             >
               Call Us
             </a>
