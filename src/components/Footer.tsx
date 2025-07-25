@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <div className="text-2xl font-bold mb-2">
-              Bacck<span className="text-primary">see</span>
+              Bacck<span className="text-accent">see</span>
             </div>
             <p className="text-background/80">
               Professional parcel return services across Canada

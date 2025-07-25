@@ -29,7 +29,7 @@ const HowItWorksSection = () => {
     <section id="how-it-works" className="py-16 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-heading mb-4">
             How It Works
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -44,7 +44,7 @@ const HowItWorksSection = () => {
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                   <step.icon className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">
+                <h3 className="text-xl font-semibold text-heading mb-3">
                   {step.title}
                 </h3>
                 <p className="text-muted-foreground">
@@ -55,9 +55,9 @@ const HowItWorksSection = () => {
           ))}
         </div>
 
-        <div className="mt-12 p-6 bg-secondary rounded-lg text-center">
+        <div className="mt-12 p-6 bg-card rounded-lg text-center border-l-4 border-accent">
           <p className="text-muted-foreground">
-            <strong>Note:</strong> Baccksee manages the entire process, but customers must cover the return shipping cost.
+            <strong className="text-heading">Note:</strong> Baccksee manages the entire process, but customers must cover the return shipping cost.
           </p>
         </div>
       </div>

@@ -15,7 +15,7 @@ const HeroSection = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Content */}
           <div className="flex-1 text-center lg:text-left">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-heading mb-6 leading-tight">
               Hassle-Free Parcel Returns, 
               <span className="block text-primary">From Pickup to Drop-Off</span>
             </h1>
@@ -29,7 +29,7 @@ const HeroSection = () => {
               <Button 
                 onClick={() => scrollToSection('book-pickup')}
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg font-medium rounded-lg"
               >
                 Book a Pickup
               </Button>
@@ -37,7 +37,7 @@ const HeroSection = () => {
                 onClick={() => scrollToSection('how-it-works')}
                 variant="outline"
                 size="lg"
-                className="px-8 py-6 text-lg border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                className="px-8 py-6 text-lg font-medium border-heading text-heading hover:bg-heading hover:text-heading-foreground rounded-lg"
               >
                 Learn How It Works
               </Button>

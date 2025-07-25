@@ -29,7 +29,7 @@ const ServicesSection = () => {
     <section id="about" className="py-16 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-heading mb-4">
             We Make Returns Effortless
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
@@ -50,7 +50,7 @@ const ServicesSection = () => {
                 <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <service.icon className="w-6 h-6 text-primary" />
                 </div>
-                <CardTitle className="text-lg text-foreground">
+                <CardTitle className="text-lg text-heading font-semibold">
                   {service.title}
                 </CardTitle>
               </CardHeader>

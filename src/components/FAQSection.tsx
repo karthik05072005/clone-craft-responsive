@@ -4,11 +4,11 @@ const FAQSection = () => {
   const faqs = [
     {
       question: "Do you cover the cost of return shipping?",
-      answer: "No, customers must cover the return shipping cost. We handle all the logistics and processing, but the shipping fees are the responsibility of the customer or the brand you're returning to."
+      answer: "No — Baccksee does not cover the cost of your return shipping. You must either provide a prepaid label or ensure the return cost is handled by the retailer. If no label is available, we can still help pack and drop off your item, but you'll be responsible for any return fees."
     },
     {
       question: "Can you return anything I give you?",
-      answer: "We can handle most returns, but items must be eligible for return according to the retailer's return policy. Before we pick up your item, please ensure it meets the return criteria of the store or brand you purchased from."
+      answer: "Not everything is eligible for return. Before scheduling a pickup, please check your retailer's return policy and item eligibility. We can handle most returns, but items must meet the return criteria of the store or brand you purchased from."
     },
     {
       question: "How far in advance should I book a pickup?",
@@ -28,7 +28,7 @@ const FAQSection = () => {
     <section id="faq" className="py-16 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-heading mb-4">
             Frequently Asked Questions
           </h2>
           <p className="text-xl text-muted-foreground">
@@ -40,7 +40,7 @@ const FAQSection = () => {
           <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left text-lg font-semibold text-foreground hover:text-primary">
+                <AccordionTrigger className="text-left text-lg font-semibold text-heading hover:text-primary">
                   {faq.question}
                 </AccordionTrigger>
                 <AccordionContent className="text-muted-foreground text-base leading-relaxed">

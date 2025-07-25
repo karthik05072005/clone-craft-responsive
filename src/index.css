@@ -8,30 +8,37 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 250 250 250;
-    --foreground: 220 13% 18%;
+    /* Baccksee Design System - Based on Design Brief */
+    --background: 45 71% 94%; /* Champagne Beige (#F7E7CE) */
+    --foreground: 0 0% 20%; /* Charcoal Gray (#333333) */
 
-    --card: 0 0% 100%;
-    --card-foreground: 220 13% 18%;
+    --card: 60 100% 99%; /* Milky White (#FFFEF7) */
+    --card-foreground: 0 0% 20%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 220 13% 18%;
+    --popover: 60 100% 99%;
+    --popover-foreground: 0 0% 20%;
 
-    /* Baccksee brand colors - teal/turquoise theme */
-    --primary: 180 100% 42%;
+    /* Primary Brand Color: Turquoise (#48D1CC) */
+    --primary: 178 65% 56%;
     --primary-foreground: 0 0% 100%;
     
-    --brand-teal: 180 100% 42%;
-    --brand-teal-light: 180 100% 85%;
-    --brand-teal-dark: 180 100% 25%;
+    /* Brand Colors */
+    --brand-turquoise: 178 65% 56%;
+    --brand-royal-blue: 215 100% 22%; /* Royal Blue (#002D72) for headings */
+    --brand-rose-pink: 330 100% 70%; /* Rose Pink (#FF66B3) for accents */
+    
+    /* Heading Color: Royal Blue */
+    --heading: 215 100% 22%;
+    --heading-foreground: 0 0% 100%;
 
-    --secondary: 220 13% 96%;
-    --secondary-foreground: 220 13% 18%;
+    --secondary: 45 71% 94%;
+    --secondary-foreground: 0 0% 20%;
 
-    --muted: 220 13% 96%;
-    --muted-foreground: 220 9% 46%;
+    --muted: 45 50% 88%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 180 100% 42%;
+    /* Accent: Rose Pink */
+    --accent: 330 100% 70%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
@@ -70,12 +77,15 @@ All colors MUST be HSL.
     --popover: 220 13% 12%;
     --popover-foreground: 220 13% 98%;
 
-    --primary: 180 100% 42%;
+    --primary: 178 65% 56%;
     --primary-foreground: 0 0% 100%;
     
-    --brand-teal: 180 100% 42%;
-    --brand-teal-light: 180 100% 20%;
-    --brand-teal-dark: 180 100% 60%;
+    --brand-turquoise: 178 65% 56%;
+    --brand-royal-blue: 215 100% 40%;
+    --brand-rose-pink: 330 100% 70%;
+    
+    --heading: 215 100% 40%;
+    --heading-foreground: 220 13% 98%;
 
     --secondary: 220 13% 15%;
     --secondary-foreground: 220 13% 98%;
@@ -110,5 +120,6 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Poppins', sans-serif;
   }
 }

@@ -24,7 +24,7 @@ const TrustSection = () => {
     <section className="py-16 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-heading mb-4">
             Trust & Safety
           </h2>
           <p className="text-xl text-muted-foreground">
@@ -39,7 +39,7 @@ const TrustSection = () => {
                 <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
                   <feature.icon className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold text-foreground mb-3">
+                <h3 className="text-xl font-semibold text-heading mb-3">
                   {feature.title}
                 </h3>
                 <p className="text-muted-foreground">
@@ -56,7 +56,7 @@ const TrustSection = () => {
             of everything we do. With Baccksee, you can trust that your returns are handled 
             with care from start to finish."
           </blockquote>
-          <cite className="text-foreground font-semibold">
+          <cite className="text-heading font-semibold">
             — The Baccksee Team
           </cite>
         </div>
