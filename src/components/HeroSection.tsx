@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-delivery.jpg";
 
 const HeroSection = () => {
   const scrollToSection = (sectionId: string) => {
@@ -46,11 +45,16 @@ const HeroSection = () => {
 
           {/* Hero Image */}
           <div className="flex-1 max-w-lg lg:max-w-none">
-            <img 
-              src={heroImage} 
-              alt="Delivery person at customer's door receiving parcels"
+            <video 
+              src="/WhatsApp Video 2025-07-25 at 5.52.50 PM.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
               className="w-full h-auto rounded-2xl shadow-2xl"
-            />
+            >
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </div>
