@@ -1,55 +1,31 @@
-import { Button } from "@/components/ui/button";
+import Header from "@/components/Header";
+import HeroSection from "@/components/HeroSection";
+import ServicesSection from "@/components/ServicesSection";
+import HowItWorksSection from "@/components/HowItWorksSection";
+import ProcessSection from "@/components/ProcessSection";
+import SupportedBrandsSection from "@/components/SupportedBrandsSection";
+import TrustSection from "@/components/TrustSection";
+import FAQSection from "@/components/FAQSection";
+import CTASection from "@/components/CTASection";
+import BookingSection from "@/components/BookingSection";
+import Footer from "@/components/Footer";
 
-const HeroSection = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
+const Index = () => {
   return (
-    <section className="pt-20 pb-16 bg-gradient-to-br from-background to-secondary">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
-          {/* Content */}
-          <div className="flex-1 text-center lg:text-left">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-heading mb-6 leading-tight">
-              Hassle-Free Parcel Returns, 
-              <span className="block text-primary">From Pickup to Drop-Off</span>
-            </h1>
-            
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl">
-              Baccksee is your complete pickup and return service that handles every step 
-              of the process. No more packing, labeling, or trips to the post office.
-            </p>
-
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button 
-                onClick={() => scrollToSection('book-pickup')}
-                size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-6 text-lg font-medium rounded-lg"
-              >
-                Book a Pickup
-              </Button>
-              <Button 
-                onClick={() => scrollToSection('how-it-works')}
-                variant="outline"
-                size="lg"
-                className="px-8 py-6 text-lg font-medium border-heading text-heading hover:bg-heading hover:text-heading-foreground rounded-lg"
-              >
-                Learn How It Works
-              </Button>
-            </div>
-          </div>
-
-          {/* Hero Image */}
-          <div className="flex-1 max-w-lg lg:max-w-none">
-          </div>
-        </div>
-      </div>
-    </section>
+    <div className="min-h-screen">
+      <Header />
+      <HeroSection />
+      <ServicesSection />
+      <HowItWorksSection />
+      <ProcessSection />
+      <SupportedBrandsSection />
+      <TrustSection />
+      <FAQSection />
+      <CTASection />
+      <BookingSection />
+      <Footer />
+    </div>
   );
 };
 
-export default HeroSection;
+export default Index;
